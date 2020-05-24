@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    padding: 0;
+    margin: 0;
+
+    font-size: 16px;
+}
+
+header {
+    display: block;
+    background-color: #222831;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    text-align: right;
+    padding: 0 20px;
+    z-index: 365;
+}
+
+header a:visited, header a, header a:hover {
+    text-decoration: none;
+}
+
+header a:visited, header a {
+    color: #b8b8b8;
+}
+
+header a:hover {
+    color: #eee;
+}
+
+header a.active {
+    color: #eee;
+}
+
+header a:nth-child(n+1) {
+    padding-left: 30px;
+}
+
+.section1 {
+    margin-top: 50px;
+    color: #eee;
+    overflow: hidden;
+}
+
+.section1 a, .section1 a:hover, .section1 a:visited {
+    color: #fd7014;
+}
+
+.section1 h1 {
+    font-size: 56px;
+}
+
+.section1 .background {
+    background-color: #222831;
+    background-image: url("section1.webp");
+    background-position: 50% 50%;
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: -100;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.section1 .back {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 900px;
+
+    padding: 150px 0;
+}
+
+.section1 .presentation {
+    max-width: 600px;
+}
+
+.section1 .presentation .button, .section1 .presentation .button:visited {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #fd7014;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-top: 20px;
+    color: #eee;
+    filter: none;
+}
+
+.section1 .presentation .button:hover {
+    background-color: #fd7c28;
+}
+
+.section1 .presentation p {
+    margin-top: 1em;
+    line-height: 1.8em;
+}
+
+.section1 .presentation em {
+    font-weight: normal;
+    font-size: 32px;
+}
+
+.section2 {
+    background-color: #393e46;
+    color: #eee;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    align-items: center;
+}
+
+.section2 .picture {
+    display: none;
+}
+
+.section2 .presentation p {
+    padding: 10px 0;
+    font-size: 32px;
+    text-align: center;
+}
+
+.section3 {
+    background-color: #222831;
+}
+
+@media screen and (min-width: 900px) {
+    .section1 .presentation {
+        margin-left: 300px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .section2 {
+        padding: 50px 0 50px 300px;
+    }
+
+    .section2 .presentation {
+        display: inline-block;
+        max-width: 600px;
+    }
+
+    .section2 .picture {
+        display: inline-block;
+        width: 40%;
+        height: 400px;
+        background: url("section2.webp") center center;
+        background-size: cover;
+        margin: 0 100px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1499px) {
+    .section2 {
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 899px) {
+    .section1 .presentation {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .section2 .presentation {
+        width: 100%;
+    }
+}
