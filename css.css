@@ -1,25 +1,40 @@
 * {
     box-sizing: border-box;
     font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    padding: 0;
     margin: 0;
+}
 
+html {
     font-size: 16px;
 }
 
 header {
     display: block;
-    background-color: #222831;
+    background-color: rgba(34, 40, 49, 0.82);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 50px;
     line-height: 50px;
-    font-size: 18px;
+    font-size: 1.2em;
     text-align: right;
     padding: 0 20px;
     z-index: 365;
+}
+
+ol {
+    counter-reset: item
+}
+
+li {
+    display: block;
+    margin-top: 7px;
+}
+
+li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item
 }
 
 header a:visited, header a, header a:hover {
@@ -30,11 +45,7 @@ header a:visited, header a {
     color: #b8b8b8;
 }
 
-header a:hover {
-    color: #eee;
-}
-
-header a.active {
+header a:hover, header a.active, .section5 a, .section5 a:visited, .section5 a:hover {
     color: #eee;
 }
 
@@ -42,8 +53,97 @@ header a:nth-child(n+1) {
     padding-left: 30px;
 }
 
+.text-large {
+    font-size: 2em;
+}
+
+.text-medium {
+    font-size: 1.4em;
+}
+
+.container, .container-stretch {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.container {
+    align-items: center;
+}
+
+.container-stretch {
+    align-items: stretch;
+}
+
+.flow, .half {
+    padding: 0 20px;
+}
+
+.full {
+    max-width: 900px;
+    width: 100%;
+}
+
+.half {
+    max-width: 450px;
+    width: 50%;
+}
+
+.engine {
+    max-width: 280px;
+    margin: 10px;
+    border: 1px solid #393e46;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.engine-header {
+    height: 75px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center;
+    padding: 10px;
+}
+
+.engine-logo {
+    height: 125px;
+    margin: 20px 0;
+}
+
+.engine-text {
+    height: 110px;
+    text-align: center;
+    padding: 10px;
+}
+
+.engine-bottom, .engine-bottom:visited {
+    display: block;
+    background-color: #fd7014;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #eee;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.engine-bottom:hover {
+    background-color: #fd7c28;
+}
+
+.engine-text p {
+    font-size: 1.2em;
+}
+
+.engine-text em {
+    font-weight: bold;
+}
+
 .section1 {
-    margin-top: 50px;
     color: #eee;
     overflow: hidden;
 }
@@ -53,17 +153,30 @@ header a:nth-child(n+1) {
 }
 
 .section1 h1 {
-    font-size: 56px;
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+.section3 h3 {
+    text-align: center;
 }
 
 .section1 .background {
     background-color: #222831;
     background-image: url("section1.webp");
     background-position: 50% 50%;
+    background-size: cover;
     width: 100%;
-    height: 900px;
+    height: 850px;
     position: absolute;
-    top: 50px;
+    top: 0;
     left: 0;
     z-index: -100;
 
@@ -74,9 +187,9 @@ header a:nth-child(n+1) {
 .section1 .back {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
-    height: 900px;
+    height: 850px;
 
-    padding: 150px 0;
+    padding: 200px 0;
 }
 
 .section1 .presentation {
@@ -104,16 +217,12 @@ header a:nth-child(n+1) {
     line-height: 1.8em;
 }
 
-.section1 .presentation em {
+em {
     font-weight: normal;
-    font-size: 32px;
 }
 
 .section2 {
     background-color: #393e46;
-    color: #eee;
-    padding-top: 50px;
-    padding-bottom: 50px;
 
     align-items: center;
 }
@@ -124,43 +233,60 @@ header a:nth-child(n+1) {
 
 .section2 .presentation p {
     padding: 10px 0;
-    font-size: 32px;
     text-align: center;
+}
+
+.section2, .section3, footer {
+    color: #eee;
+}
+
+.section2, .section3, .section4, .section5 {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .section3 {
     background-color: #222831;
 }
 
+.section3 h2 {
+    text-align: center;
+}
+
+.section4 {
+    background-color: #eee;
+    color: #222831;
+}
+
+.section4 h3 {
+    margin: 10px 0;
+}
+
+.section5 {
+    background-color: #fd7014;
+    color: #393e46;
+    text-align: center;
+}
+
+footer {
+    background-color: #222831;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
 @media screen and (min-width: 900px) {
     .section1 .presentation {
         margin-left: 300px;
     }
-}
-
-@media screen and (min-width: 1500px) {
-    .section2 {
-        padding: 50px 0 50px 300px;
-    }
-
-    .section2 .presentation {
-        display: inline-block;
-        max-width: 600px;
-    }
 
     .section2 .picture {
         display: inline-block;
-        width: 40%;
-        height: 400px;
+        height: 300px;
         background: url("section2.webp") center center;
         background-size: cover;
-        margin: 0 100px;
-    }
-}
-
-@media screen and (min-width: 500px) and (max-width: 1499px) {
-    .section2 {
-        padding: 50px;
     }
 }
 
@@ -168,9 +294,5 @@ header a:nth-child(n+1) {
     .section1 .presentation {
         width: 100%;
         padding: 20px;
-    }
-
-    .section2 .presentation {
-        width: 100%;
     }
 }
