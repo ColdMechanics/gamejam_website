@@ -7,7 +7,7 @@
     <link href="css.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body id="body">
 <header>
     <nav>
         <a class="active" href="index.html">Accueil</a>
@@ -163,7 +163,8 @@
     
     check_webp_feature(function (supportWebp) {
         if (!supportWebp) {
-            document.getElementsByName('body')[0].classList.add(".no-webp");
+            var d = document.getElementById("body");
+            d.className += " no-webp";
         }
     });
 </script>
