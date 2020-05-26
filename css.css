@@ -263,8 +263,8 @@ em {
 }
 
 .section5 {
-    background-color: #fd7014;
-    color: #393e46;
+    color: #fd7014;
+    background-color: #393e46;
     text-align: center;
 }
 
@@ -291,8 +291,16 @@ footer {
 }
 
 @media screen and (max-width: 899px) {
-    .section1 .presentation {
+    .section1 .presentation, .section2, .section3, .section4, .section5 {
         width: 100%;
         padding: 20px;
+    }
+
+    .section1 .back {
+        padding: 75px 0;
+    }
+
+    .half {
+        width: 100%;
     }
 }
