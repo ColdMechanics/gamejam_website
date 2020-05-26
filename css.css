@@ -184,6 +184,10 @@ h3 {
     filter: grayscale(100%);
 }
 
+.no-webp .section1 .background {
+    background-image: url("section1.jpg");
+}
+
 .section1 .back {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
@@ -287,6 +291,10 @@ footer {
         height: 300px;
         background: url("section2.webp") center center;
         background-size: cover;
+    }
+
+    .no-webp .section2 .picture {
+        background-image: url("section2.jpg");
     }
 }
 
