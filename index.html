@@ -145,7 +145,6 @@
 <footer>
     © 2020 ColdMechanics
 </footer>
-</body>
 <script>
     function check_webp_feature(callback) {
         var lossy = "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA";
@@ -160,7 +159,7 @@
         };
         img.src = "data:image/webp;base64," + lossy;
     }
-    
+
     check_webp_feature(function (supportWebp) {
         if (!supportWebp) {
             var d = document.getElementById("body");
@@ -168,4 +167,5 @@
         }
     });
 </script>
+</body>
 </html>
