@@ -77,7 +77,7 @@ header a:nth-child(n+1) {
     align-items: stretch;
 }
 
-.flow, .half {
+.full, .half {
     padding: 0 20px;
 }
 
