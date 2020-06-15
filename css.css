@@ -100,6 +100,10 @@ header a:nth-child(n+1) {
     overflow: hidden;
 }
 
+.engine.complete {
+    opacity: 0.5;
+}
+
 .engine-header {
     height: 75px;
     margin: 10px 0;
